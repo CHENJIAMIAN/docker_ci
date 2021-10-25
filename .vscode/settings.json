@@ -23,4 +23,9 @@
             "privateKey": "/Users/xia/.ssh/id_rsa"
         }],
     },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#033147",
+        "titleBar.activeBackground": "#054464",
+        "titleBar.activeForeground": "#F5FCFF"
+    },
 }

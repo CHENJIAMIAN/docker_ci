@@ -22,7 +22,7 @@ const store = {
 if (process.env.NODE_ENV === 'production') {
   global.url = ''
 } else {
-  global.url = 'http://localhost:3000/'
+  global.url = 'http://localhost:8801/'
 }
 global.getData = (url) => {
 

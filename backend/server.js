@@ -8,7 +8,7 @@ app.use(express.static('static'))
 app.get('/', (req, res) => res.send('Hello World!'))
 
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(8801, () => console.log('Example app listening on port 8801!'))
 
 const course = JSON.parse(fs.readFileSync(path.resolve(__dirname, './models/goods.json')).toString())
 const allData = []

@@ -1,7 +1,7 @@
 version: '3.1'
 services:
-  app-pm2:
-      container_name: app-pm2
+  backend-service:
+      container_name: backend-service
       #构建容器
       build: ./backend
       #直接从git拉去
@@ -10,12 +10,12 @@ services:
       # volumes:
       #   - ./backend:/usr/src/app
       ports:
-        - "3000:3000"
+        - "8801:8801"
   mongo:
     image: mongo
     restart: always
     ports:
-      - 27017:27017
+      - 8802:27017
   # mongo-express:
   #   image: mongo-express
   #   restart: always 
