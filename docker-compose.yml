@@ -1,16 +1,21 @@
 version: '3.1'
 services:
   backend-service:
-      container_name: backend-service
-      #构建容器
-      build: ./backend
-      #直接从git拉去
-      # build: git@github.com:su37josephxia/docker_ci.git#:backend
-      # 需要链接本地代码时
-      # volumes:
-      #   - ./backend:/usr/src/app
-      ports:
-        - "8801:8801"
+    container_name: backend-service
+    #构建容器
+    build: ./backend
+    #直接从git拉去
+    # build: git@github.com:su37josephxia/docker_ci.git#:backend
+    # 需要链接本地代码时
+    # volumes:
+    #   - ./backend:/usr/src/app
+    volumes:
+      # Allows changes made to project directory to be accessed by the container and persist
+      - ./backend:/usr/src/app
+      # A volume dedicated to node modules.
+      - ./backend/node_modules:/usr/src/app/node_modules
+    ports:
+      - '7001:7001'
   mongo:
     image: mongo
     restart: always
@@ -18,7 +23,7 @@ services:
       - 8802:27017
   # mongo-express:
   #   image: mongo-express
-  #   restart: always 
+  #   restart: always
   #   ports:
   #     - 8081:8081
   nginx:

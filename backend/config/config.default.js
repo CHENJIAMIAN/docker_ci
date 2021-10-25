@@ -35,9 +35,10 @@ module.exports = appInfo => {
   }
 
   config.mongoose = {
-    url: 'mongodb://127.0.0.1:8802/egg_x',
+    url: 'mongodb://mongo:27017/egg_x',
     options: {
       // useMongoClient: true,
+      useUnifiedTopology: true,
       autoReconnect: true,
       reconnectTries: Number.MAX_VALUE,
       bufferMaxEntries: 0,

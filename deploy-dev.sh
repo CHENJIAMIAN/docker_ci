@@ -15,4 +15,4 @@ docker-compose up -d --force-recreate --build
 # 重启启动容器
 # docker stop myapp
 # docker rm myapp
-# docker run --name myapp -p 8801:8801  -d myapp:pm2
+# docker run --name myapp -p 7001:7001  -d myapp:pm2
