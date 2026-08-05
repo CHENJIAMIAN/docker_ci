@@ -1,4 +1,13 @@
 # docker_ci
+
+<!-- codex-github-rules:bilingual-summary -->
+> **中文简介**：使用 Docker 和 GitHub Webhook 实现持续集成的测试项目
+
+> **English summary**: A test project for continuous integration with Docker and GitHub Webhooks
+
+> **Fork 说明 / Fork note**：这是上游项目的公开 fork；下方保留并延续上游文档。
+
+---
 测试使用Docker / Github Webhook实现CI持续集成
 
 - docker-compose
